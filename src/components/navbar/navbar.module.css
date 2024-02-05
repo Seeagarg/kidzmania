@@ -1,0 +1,95 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    background: rgb(99,7,95);
+    background: linear-gradient(90deg, rgba(99,7,95,1) 2%, rgba(7,72,99,1) 49%, rgba(5,84,15,1) 100%, rgba(136,2,88,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    color: white;
+    /* width: 100%; */
+    box-shadow: rgba(11, 23, 161, 0.25) 0px 54px 55px, rgba(16, 20, 233, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.logoutAnimation{
+    height: 35px;
+    width: 35px;
+    color: white;
+    /* background-color: aliceblue;
+    border-radius: 50%; */
+}
+
+.btnLogout{
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0;
+    /* padding-top: 10px; */
+    padding-inline: 10px;
+    background: rgb(114,8,116);
+    background: linear-gradient(90deg, rgba(114,8,116,1) 41%, rgba(136,2,88,1) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(255, 255, 255, 0.41);
+}
+
+
+
+
+.text{
+    letter-spacing: 12px;
+    color:#c9c9c9
+    
+}
+.play{
+    transition: all 1s;
+}
+
+.play:hover{
+    scale: 0.8;
+}
+.btn{
+    opacity: 0;
+    display: none;
+    transform: translateY(0);
+    transition: all 1s;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background-color: rgba(208, 208, 10, 0.97);
+
+}
+.play:is(:hover) .btn{
+    display: block;
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(-130px);
+
+}
+
+
+.shadow{
+    border-radius: 10%;
+    /* box-shadow: rgba(11, 23, 161, 0.25) 0px 54px 55px, rgba(16, 20, 233, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+.container{
+    margin-top: 6%;
+}
+@media screen and (max-width:700px){
+    .play:is(:hover) .btn{
+        display: block;
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(-80px);
+    
+    }
+}

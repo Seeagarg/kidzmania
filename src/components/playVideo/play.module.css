@@ -1,0 +1,138 @@
+.background{
+    background-color: #df1e1e;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin-inline: 10px;
+    margin: 10px;
+}
+
+.cardImage{
+    border-radius: 20px;
+     height: 40vh;
+     width: 21vw;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.cardImage:hover{
+    opacity:0.4;
+
+}
+
+.text{
+    letter-spacing: 12px;
+    color:#c9c9c9
+    
+}
+.play{
+    transition: all 1s;
+}
+
+.play:hover{
+    scale: 0.8;
+}
+
+
+.btn{
+    opacity: 0;
+    display: none;
+    transform: translateY(0);
+    transition: all 1s;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    background-color: rgba(208, 208, 10, 0.97);
+}
+
+.play:is(:hover) .btn{
+    display: block;
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(-130px);
+
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    box-shadow: rgba(11, 23, 161, 0.25) 0px 54px 55px, rgba(16, 20, 233, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container{
+    margin-top: 6%;
+}
+
+
+
+@media only screen and (max-width:992px){
+    .random{
+        margin-top: 10vh;
+    }
+    .randomShort{
+        position: absolute;
+        bottom:6rem;
+        right: 2.5rem;
+        height: 20vh;
+        width:12rem;
+        border-radius: 20px;
+        border: 2px solid grey;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    
+    .randomShort{
+        position: absolute;
+        bottom:6rem;
+        right: 2.5rem;
+        height: 20vh;
+        width:12rem;
+        border-radius: 20px;
+        border: 2px solid grey;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .cardImage{
+        border-radius: 20px;
+         height: 40vh;
+         width: 30vw;
+    
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    .random{
+        margin-top: 10vh;
+    }
+
+    .randomShort{
+        position: absolute;
+        bottom:6rem;
+        right: 2.5rem;
+        height: 20vh;
+        width:12rem;
+        border-radius: 20px;
+        border: 2px solid grey;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .cardImage{
+        border-radius: 20px;
+         height: 40vh;
+         width: 80vw;
+    
+    }
+}
