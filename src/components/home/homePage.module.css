@@ -127,6 +127,14 @@
     scale: 0.8;
 }
 
+.loadingAnimation{
+    position: absolute;
+    top:-40vh;
+    padding: 0;
+    
+    background-color: black;
+}
+
 
 
 /* .navbar{

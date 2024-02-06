@@ -73,6 +73,7 @@ const owlCarouselOptions = {
   
         console.log('result',randomVideoData.data.video[0].videoUrl)
         setRandomVideo(randomVideoData.data)
+        setIsLoading(false)
       }
   
       getRandomVideo();
@@ -126,7 +127,7 @@ const owlCarouselOptions = {
         
         setDataLength(data.data.result.length);
         console.log(videosData,"nnnnnn");
-        setIsLoading(false)
+        // setIsLoading(false)
       } catch (error) {
         console.log(error,"erros")
       }
@@ -165,6 +166,8 @@ const owlCarouselOptions = {
         animationData={loading}
         height={"10vh"}
         width={"10vw"}
+        loop={true}
+        className={`${classes.loadingAnimation}`}
         />
         
         
