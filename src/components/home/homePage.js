@@ -78,10 +78,6 @@ const owlCarouselOptions = {
       getRandomVideo();
     }
 
-
-    
-    
-
   },[videosData])
 
   function AllClick(){
