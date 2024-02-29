@@ -51,6 +51,12 @@ function Play() {
      
       <div className={`row  ${classes.container}`}>
       <Navbar/>
+      <div>
+      <button  className={`${classes.back}`} onClick={()=>{navigate('/home')}}>
+      Go back
+      </button>
+        
+      </div>
         <ReactPlayer
           // url={videoUrl.replace("mpd", "mp4")}
           url={videoData?.videoUrl}
@@ -72,12 +78,13 @@ function Play() {
               <div key={i} className={`${classes.card}`}>
                 <div
                   class={`${classes.play}`}
+                  onClick={() => handleNavigateAndScroll(`/play/${data?.id}`)}
                 >
                   <Link to={`/play/${data?.id}`}>
                     <img src={data?.imageUrl} className={`${classes.cardImage}`} alt="..." />
                   </Link>
                   <button
-                    onClick={() => handleNavigateAndScroll(`/play/${data?.id}`)}
+                    // onClick={() => handleNavigateAndScroll(`/play/${data?.id}`)}
                     className={`${classes.btn}`}
                   >
                     Play Now

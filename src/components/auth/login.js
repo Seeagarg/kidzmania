@@ -8,6 +8,9 @@ import login from '../../Animations/login.json'
 import Lottie from 'lottie-react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
 
@@ -23,16 +26,22 @@ const Login = () => {
 
     console.log("pin  ",pin)
     console.log("url",url,"data",data);
-    const response =await axios.post(url,data)
-    console.log("response",response.data)
-    if(response.data.message == "Login Successfully"){
+    try {
+      const response =await axios.post(url,data)
+      // console.log(response.data)
+    if(response.status == 200){
       localStorage.setItem("PIN",pin)
-      navigate('/home')
+
+      toast.success(response.data.message)
+      setTimeout(()=>{
+        navigate('/home')
+      },1000)
     }
-    if(response.data.message == "Invalid PIN"){
-      alert("Incorrect Pin")
+    } catch (error) {
+      console.log("err",error)
+      toast.error(error.response.data.message)
+      setPin("")
     }
-    
   }
 
 
@@ -71,6 +80,7 @@ const Login = () => {
     </div>
     
     </div>
+    <ToastContainer/>
     </div>
   </div>
   )

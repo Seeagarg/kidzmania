@@ -1,4 +1,5 @@
 const baseUrl=`https://tsel.kiddzmania.com`
+// const baseUrl=``
 export {baseUrl}
 
 const videosApi=`/api/v1/getVideos`

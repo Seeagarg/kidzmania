@@ -5,6 +5,9 @@
 .items{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .card{
@@ -38,6 +41,15 @@
     scale: 0.8;
 }
 
+.back{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    width: 15vw;
+    margin-top: 10vh;
+}
+
 
 .btn{
     opacity: 0;
@@ -47,6 +59,7 @@
     border: none;
     outline: none;
     border-radius: 12px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +83,7 @@
 }
 
 .container{
-    margin-top: 6%;
+    margin-top: 5%;
 }
 
 
@@ -134,5 +147,13 @@
          height: 40vh;
          width: 80vw;
     
+    }
+    .back{
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        display: block;
+        width: 20vw;
+        margin-top: 15vh;
     }
 }
